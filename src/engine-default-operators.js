@@ -18,5 +18,9 @@ Operators.push(new Operator('lessThan', (a, b) => a < b, numberValidator))
 Operators.push(new Operator('lessThanInclusive', (a, b) => a <= b, numberValidator))
 Operators.push(new Operator('greaterThan', (a, b) => a > b, numberValidator))
 Operators.push(new Operator('greaterThanInclusive', (a, b) => a >= b, numberValidator))
+Operators.push(new Operator('greaterThanAndLessThan', (a, b) => (a > b[0]) && (a < b[1])))
+Operators.push(new Operator('LessThanAndGreaterThan', (a, b) => (a < b[0]) && (a > b[1])))
+Operators.push(new Operator('LessThanAndGreaterThanInclusive', (a, b) => (a <= b[0]) && (a >= b[1])))
+Operators.push(new Operator('greaterThanAndLessThanInclusive', (a, b) => (a >= b[0]) && (a <= b[1])))
 
 export default Operators
